@@ -1,8 +1,12 @@
-import './App.css';
+import UserComponent from "./component/UserComponent";
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <UserComponent/>
     </div>
   );
 }
+
+export default App;
