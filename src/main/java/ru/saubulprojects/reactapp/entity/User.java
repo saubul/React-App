@@ -5,6 +5,7 @@ import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.saubulprojects.reactapp.dto.UserDTO;
 
 @Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(name = "email_constraint", columnNames = {"email"})})
@@ -21,4 +22,8 @@ public class User {
 	
 	private String email;
 	
+	public User(UserDTO userDTO) {
+		this.name = userDTO.getName();
+		this.email = userDTO.getEmail();
+	}
 }

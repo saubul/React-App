@@ -9,7 +9,11 @@ class UserService {
 	}
 
 	addUser(user) {
-		return axios.post(USERS_REST_API_URL, user);
+		axios.post(USERS_REST_API_URL + "/add", user);
+	}
+
+	deleteUser(id) {
+		axios.delete(USERS_REST_API_URL + `/delete/${id}`);
 	}
 	
 }
